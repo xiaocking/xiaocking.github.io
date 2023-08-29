@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux 命令 | xiaoc的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.jpg">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.884cb2a9.css" as="style"><link rel="preload" href="/assets/js/app.2d549f1d.js" as="script"><link rel="preload" href="/assets/js/3.f3b3b376.js" as="script"><link rel="preload" href="/assets/js/1.8209a100.js" as="script"><link rel="preload" href="/assets/js/141.5cff732e.js" as="script"><link rel="prefetch" href="/assets/js/10.5dbe1282.js"><link rel="prefetch" href="/assets/js/100.47564faa.js"><link rel="prefetch" href="/assets/js/101.cd3db452.js"><link rel="prefetch" href="/assets/js/102.70368c1a.js"><link rel="prefetch" href="/assets/js/103.b5b913ad.js"><link rel="prefetch" href="/assets/js/104.4d08f14c.js"><link rel="prefetch" href="/assets/js/105.206e8c92.js"><link rel="prefetch" href="/assets/js/106.cf7d0b00.js"><link rel="prefetch" href="/assets/js/107.15f0ab1b.js"><link rel="prefetch" href="/assets/js/108.a59d7a5b.js"><link rel="prefetch" href="/assets/js/109.4db931f3.js"><link rel="prefetch" href="/assets/js/11.5edcc761.js"><link rel="prefetch" href="/assets/js/110.55330801.js"><link rel="prefetch" href="/assets/js/111.100839a8.js"><link rel="prefetch" href="/assets/js/112.3b6541a0.js"><link rel="prefetch" href="/assets/js/113.3afec378.js"><link rel="prefetch" href="/assets/js/114.16aeb31c.js"><link rel="prefetch" href="/assets/js/115.71fff080.js"><link rel="prefetch" href="/assets/js/116.4a2f6b42.js"><link rel="prefetch" href="/assets/js/117.53037173.js"><link rel="prefetch" href="/assets/js/118.769f79af.js"><link rel="prefetch" href="/assets/js/119.5394e1d7.js"><link rel="prefetch" href="/assets/js/12.e6b5d914.js"><link rel="prefetch" href="/assets/js/120.1750b318.js"><link rel="prefetch" href="/assets/js/121.acda6511.js"><link rel="prefetch" href="/assets/js/122.3b34a324.js"><link rel="prefetch" href="/assets/js/123.6518e95c.js"><link rel="prefetch" href="/assets/js/124.3a9c4e51.js"><link rel="prefetch" href="/assets/js/125.517084f4.js"><link rel="prefetch" href="/assets/js/126.b3852a60.js"><link rel="prefetch" href="/assets/js/127.d751eaae.js"><link rel="prefetch" href="/assets/js/128.e3be3c47.js"><link rel="prefetch" href="/assets/js/129.6f06ff83.js"><link rel="prefetch" href="/assets/js/13.e01ec1a3.js"><link rel="prefetch" href="/assets/js/130.aaa71d24.js"><link rel="prefetch" href="/assets/js/131.6cbb65b0.js"><link rel="prefetch" href="/assets/js/132.509badb9.js"><link rel="prefetch" href="/assets/js/133.da35eca0.js"><link rel="prefetch" href="/assets/js/134.d0b594a5.js"><link rel="prefetch" href="/assets/js/135.862630a7.js"><link rel="prefetch" href="/assets/js/136.bf099cf8.js"><link rel="prefetch" href="/assets/js/137.e6eb4124.js"><link rel="prefetch" href="/assets/js/138.dd9a8d9e.js"><link rel="prefetch" href="/assets/js/139.0a5f619c.js"><link rel="prefetch" href="/assets/js/14.f8e3c0e5.js"><link rel="prefetch" href="/assets/js/140.849cc5c7.js"><link rel="prefetch" href="/assets/js/142.f206916d.js"><link rel="prefetch" href="/assets/js/143.e860fd09.js"><link rel="prefetch" href="/assets/js/144.a9c5f5f1.js"><link rel="prefetch" href="/assets/js/145.bf140418.js"><link rel="prefetch" href="/assets/js/146.0643eb24.js"><link rel="prefetch" href="/assets/js/147.b3f3b36a.js"><link rel="prefetch" href="/assets/js/148.3d5a0d77.js"><link rel="prefetch" href="/assets/js/149.9ac2614a.js"><link rel="prefetch" href="/assets/js/15.e888e31c.js"><link rel="prefetch" href="/assets/js/150.20e35210.js"><link rel="prefetch" href="/assets/js/151.07168c2b.js"><link rel="prefetch" href="/assets/js/152.69774311.js"><link rel="prefetch" href="/assets/js/153.1e95b0f1.js"><link rel="prefetch" href="/assets/js/154.3e48e764.js"><link rel="prefetch" href="/assets/js/155.192def2c.js"><link rel="prefetch" href="/assets/js/156.d7b9c99c.js"><link rel="prefetch" href="/assets/js/157.46dbe66a.js"><link rel="prefetch" href="/assets/js/158.4aa537d8.js"><link rel="prefetch" href="/assets/js/159.2c33aa07.js"><link rel="prefetch" href="/assets/js/16.23274e21.js"><link rel="prefetch" href="/assets/js/160.34f29f4d.js"><link rel="prefetch" href="/assets/js/161.ed2b07ae.js"><link rel="prefetch" href="/assets/js/162.125dfee3.js"><link rel="prefetch" href="/assets/js/163.efacc391.js"><link rel="prefetch" href="/assets/js/164.0dd470c1.js"><link rel="prefetch" href="/assets/js/165.8d0c2bee.js"><link rel="prefetch" href="/assets/js/166.824ea8eb.js"><link rel="prefetch" href="/assets/js/167.bb39dfdb.js"><link rel="prefetch" href="/assets/js/168.9e667fe7.js"><link rel="prefetch" href="/assets/js/169.6ef7d632.js"><link rel="prefetch" href="/assets/js/17.a5567d3d.js"><link rel="prefetch" href="/assets/js/170.c90005ed.js"><link rel="prefetch" href="/assets/js/171.1bd659b9.js"><link rel="prefetch" href="/assets/js/172.57e6b6c6.js"><link rel="prefetch" href="/assets/js/173.eab16bc4.js"><link rel="prefetch" href="/assets/js/174.da5a6c8b.js"><link rel="prefetch" href="/assets/js/175.bcee5b27.js"><link rel="prefetch" href="/assets/js/176.3021c4dc.js"><link rel="prefetch" href="/assets/js/177.85ff01df.js"><link rel="prefetch" href="/assets/js/18.5df58216.js"><link rel="prefetch" href="/assets/js/19.70e0bfa5.js"><link rel="prefetch" href="/assets/js/20.23fbd1a5.js"><link rel="prefetch" href="/assets/js/21.62460ebe.js"><link rel="prefetch" href="/assets/js/22.ee21302a.js"><link rel="prefetch" href="/assets/js/23.b83a02f4.js"><link rel="prefetch" href="/assets/js/24.d44bdc3c.js"><link rel="prefetch" href="/assets/js/25.d0f8cc62.js"><link rel="prefetch" href="/assets/js/26.4616b7ca.js"><link rel="prefetch" href="/assets/js/27.ceef2128.js"><link rel="prefetch" href="/assets/js/28.531a527c.js"><link rel="prefetch" href="/assets/js/29.7bd316b0.js"><link rel="prefetch" href="/assets/js/30.a04d4fc3.js"><link rel="prefetch" href="/assets/js/31.c3eda439.js"><link rel="prefetch" href="/assets/js/32.b7c2805a.js"><link rel="prefetch" href="/assets/js/33.cae852ca.js"><link rel="prefetch" href="/assets/js/34.d47853ce.js"><link rel="prefetch" href="/assets/js/35.e96bcfcd.js"><link rel="prefetch" href="/assets/js/36.d5104700.js"><link rel="prefetch" href="/assets/js/37.695754a2.js"><link rel="prefetch" href="/assets/js/38.93689b7a.js"><link rel="prefetch" href="/assets/js/39.8726a2b2.js"><link rel="prefetch" href="/assets/js/4.23177bae.js"><link rel="prefetch" href="/assets/js/40.eef18f8f.js"><link rel="prefetch" href="/assets/js/41.88324e56.js"><link rel="prefetch" href="/assets/js/42.37124c37.js"><link rel="prefetch" href="/assets/js/43.dc2fec38.js"><link rel="prefetch" href="/assets/js/44.7118f184.js"><link rel="prefetch" href="/assets/js/45.412c614a.js"><link rel="prefetch" href="/assets/js/46.750decab.js"><link rel="prefetch" href="/assets/js/47.76e52d66.js"><link rel="prefetch" href="/assets/js/48.b423c6af.js"><link rel="prefetch" href="/assets/js/49.8393289b.js"><link rel="prefetch" href="/assets/js/5.383ba001.js"><link rel="prefetch" href="/assets/js/50.26c6cf97.js"><link rel="prefetch" href="/assets/js/51.2c10058f.js"><link rel="prefetch" href="/assets/js/52.73a130d1.js"><link rel="prefetch" href="/assets/js/53.a2b785bf.js"><link rel="prefetch" href="/assets/js/54.f9851846.js"><link rel="prefetch" href="/assets/js/55.afea43d4.js"><link rel="prefetch" href="/assets/js/56.5338c4b9.js"><link rel="prefetch" href="/assets/js/57.4337f716.js"><link rel="prefetch" href="/assets/js/58.32eb9e7b.js"><link rel="prefetch" href="/assets/js/59.de4bcfa5.js"><link rel="prefetch" href="/assets/js/6.4215f555.js"><link rel="prefetch" href="/assets/js/60.ef03be64.js"><link rel="prefetch" href="/assets/js/61.dd62adfd.js"><link rel="prefetch" href="/assets/js/62.4fe39b57.js"><link rel="prefetch" href="/assets/js/63.56816d48.js"><link rel="prefetch" href="/assets/js/64.5380b154.js"><link rel="prefetch" href="/assets/js/65.3a4951f9.js"><link rel="prefetch" href="/assets/js/66.f611d0ff.js"><link rel="prefetch" href="/assets/js/67.2b993d9f.js"><link rel="prefetch" href="/assets/js/68.5c0b4463.js"><link rel="prefetch" href="/assets/js/69.a523f2d9.js"><link rel="prefetch" href="/assets/js/7.120b33e1.js"><link rel="prefetch" href="/assets/js/70.6961621c.js"><link rel="prefetch" href="/assets/js/71.bc2b133b.js"><link rel="prefetch" href="/assets/js/72.75c014a6.js"><link rel="prefetch" href="/assets/js/73.b951c564.js"><link rel="prefetch" href="/assets/js/74.be4dc63f.js"><link rel="prefetch" href="/assets/js/75.9f71feae.js"><link rel="prefetch" href="/assets/js/76.5f3ef29d.js"><link rel="prefetch" href="/assets/js/77.5b3ed3b1.js"><link rel="prefetch" href="/assets/js/78.73f29f97.js"><link rel="prefetch" href="/assets/js/79.e558e53b.js"><link rel="prefetch" href="/assets/js/8.9f22520d.js"><link rel="prefetch" href="/assets/js/80.049ac281.js"><link rel="prefetch" href="/assets/js/81.2872e208.js"><link rel="prefetch" href="/assets/js/82.9d607e6b.js"><link rel="prefetch" href="/assets/js/83.3bd47dad.js"><link rel="prefetch" href="/assets/js/84.be24c8a1.js"><link rel="prefetch" href="/assets/js/85.dd0cbe59.js"><link rel="prefetch" href="/assets/js/86.77c44d40.js"><link rel="prefetch" href="/assets/js/87.bee97159.js"><link rel="prefetch" href="/assets/js/88.d165f2f5.js"><link rel="prefetch" href="/assets/js/89.d1126f5e.js"><link rel="prefetch" href="/assets/js/9.2cd96ac8.js"><link rel="prefetch" href="/assets/js/90.f89db5e9.js"><link rel="prefetch" href="/assets/js/91.803010df.js"><link rel="prefetch" href="/assets/js/92.fb0f6ec2.js"><link rel="prefetch" href="/assets/js/93.f933c54a.js"><link rel="prefetch" href="/assets/js/94.97b36448.js"><link rel="prefetch" href="/assets/js/95.40892a3c.js"><link rel="prefetch" href="/assets/js/96.2f94ab52.js"><link rel="prefetch" href="/assets/js/97.44e95a5d.js"><link rel="prefetch" href="/assets/js/98.950a8314.js"><link rel="prefetch" href="/assets/js/99.1d22c148.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.884cb2a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>xiaoc的博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc></p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="xiaoc的博客" class="logo"> <span class="site-name">xiaoc的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Javascript
+</a></div><div class="nav-item"><a href="/ECMAScript6/" class="nav-link"><i class="iconfont reco-api"></i>
+  ECMAScript6
+</a></div><div class="nav-item"><a href="/Typescript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Typescript
+</a></div><div class="nav-item"><a href="/css/" class="nav-link"><i class="iconfont reco-api"></i>
+  Css
+</a></div><div class="nav-item"><a href="https://github.com/xiaocking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><!----> <!----> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>167</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>0</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Javascript
+</a></div><div class="nav-item"><a href="/ECMAScript6/" class="nav-link"><i class="iconfont reco-api"></i>
+  ECMAScript6
+</a></div><div class="nav-item"><a href="/Typescript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Typescript
+</a></div><div class="nav-item"><a href="/css/" class="nav-link"><i class="iconfont reco-api"></i>
+  Css
+</a></div><div class="nav-item"><a href="https://github.com/xiaocking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>介绍</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">介绍</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/web/drawingBoard/drwaingBoard.html" class="sidebar-link">Javascript 实现简单画板</a></li><li><a href="/guide/web/errorHandler/" class="sidebar-link">vue 全局异常捕获</a></li><li><a href="/guide/web/qiankun/" class="sidebar-link">Qiankun 微前端框架初探(vue2)</a></li><li><a href="/guide/web/storageLib/" class="sidebar-link">lz-storage-lib</a></li><li><a href="/guide/web/taroUpdate/taroUpdate.html" class="sidebar-link">Taro 升级 2.x 最新版本</a></li><li><a href="/guide/web/vue/" class="sidebar-link">Vue 笔记</a></li><li><a href="/guide/web/vue-auto-load-router/" class="sidebar-link">vue 自动注入路由、公共组件</a></li><li><a href="/guide/web/vue3-project/" class="sidebar-link">搭建 vue3 规范的项目环境</a></li><li><a href="/guide/web/vueconfig/" class="sidebar-link">vue/cli 简单实用配置</a></li><li><a href="/guide/web/z-codeSegment/codeSegment.html" class="sidebar-link">代码片段</a></li><li><a href="/guide/web/z-problem/problem.html" class="sidebar-link">常见问题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>插件/工具相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/tools/airbnb/" class="sidebar-link">Airbnb JavaScript 风格指南</a></li><li><a href="/guide/tools/eslintrc/eslintrc.html" class="sidebar-link">.eslintrc 配置详解</a></li><li><a href="/guide/tools/fiddler/" class="sidebar-link">Fiddler 抓包安装使用</a></li><li><a href="/guide/tools/git/git.html" class="sidebar-link">Git 安装使用</a></li><li><a href="/guide/tools/miniProgramCi/miniProgramCi.html" class="sidebar-link">uni-app 微信小程序自动上传版本</a></li><li><a href="/guide/tools/prettier/prettier.html" class="sidebar-link">.prettierrc 配置详解</a></li><li><a href="/guide/tools/toolset/toolset.html" class="sidebar-link">常用框架及工具整理</a></li><li><a href="/guide/tools/tsconfig/tsconfig.html" class="sidebar-link">tsconfig.json 配置详解</a></li><li><a href="/guide/tools/vscodePlugin/vscodePlugin.html" class="sidebar-link">VS Code常用插件</a></li><li><a href="/guide/tools/webpack/webpack.html" class="sidebar-link">webpack 常用插件</a></li><li><a href="/guide/tools/yarn/yarn.html" class="sidebar-link">yarn 安装使用</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>nodeJs相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/nodeJs/httpServer/" class="sidebar-link">http-server 安装使用</a></li><li><a href="/guide/nodeJs/mongo-command/" class="sidebar-link">mongo 常用命令</a></li><li><a href="/guide/nodeJs/mongoDB-install/" class="sidebar-link">mongoDB 安装配置</a></li><li><a href="/guide/nodeJs/mongoose/" class="sidebar-link">mongoose 相关</a></li><li><a href="/guide/nodeJs/node-video/" class="sidebar-link">NodeJs 实现简单视频播放</a></li><li><a href="/guide/nodeJs/nodeJs/" class="sidebar-link">nodeJs 相关</a></li><li><a href="/guide/nodeJs/nodeJs-mall/" class="sidebar-link">nodeJs 邮件发送</a></li><li><a href="/guide/nodeJs/nodeTree/" class="sidebar-link">NodeJs 生成本地文件树</a></li><li><a href="/guide/nodeJs/npm/" class="sidebar-link">NPM 相关</a></li><li><a href="/guide/nodeJs/nrm/" class="sidebar-link">nrm 安装使用</a></li><li><a href="/guide/nodeJs/nvm/" class="sidebar-link">nvm 安装使用</a></li><li><a href="/guide/nodeJs/pnpm/" class="sidebar-link">pnpm 相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/Linux/code-server/code-server.html" class="sidebar-link">vscode 远程开发</a></li><li><a href="/guide/Linux/linux-command/" aria-current="page" class="active sidebar-link">Linux 命令</a></li><li><a href="/guide/Linux/linux-install-nodeJs/" class="sidebar-link">Linux 安装 nodeJs</a></li><li><a href="/guide/Linux/linux-set-auth/" class="sidebar-link">Linux 设置 root 权限</a></li><li><a href="/guide/Linux/nginx/nginx.html" class="sidebar-link">Linux 安装 nginx</a></li><li><a href="/guide/Linux/sn/" class="sidebar-link">screen 命令</a></li><li><a href="/guide/Linux/ss/" class="sidebar-link">Linux 搭建 vps</a></li><li><a href="/guide/Linux/updateCore/" class="sidebar-link">CentOs7 升级/更新内核</a></li><li><a href="/guide/Linux/vnc-viewer/" class="sidebar-link">Centos7搭建使用图形化界面</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/other/cdn/" class="sidebar-link">使用 CDN 加载项目静态资源</a></li><li><a href="/guide/other/gitee/gitee.html" class="sidebar-link">Gitee Page搭建个人博客</a></li><li><a href="/guide/other/githubPages/GitHubPages.html" class="sidebar-link">Github Pages 建立个人博客网站</a></li><li><a href="/guide/other/gitlab_ci_cd/" class="sidebar-link">Gitlab 配置 CI/CD</a></li><li><a href="/guide/other/jenkins/" class="sidebar-link">jenkins 安装配置</a></li><li><a href="/guide/other/markdown/" class="sidebar-link">Markdown 相关语法</a></li><li><a href="/guide/other/open_with_code/" class="sidebar-link">win10 使用 vscode 打开文件(夹)</a></li><li><a href="/guide/other/vuepress/" class="sidebar-link">Vuepress markdown扩展语法</a></li><li><a href="/guide/other/vuepress-emoji/" class="sidebar-link">vuepress 所有支持的 Emoji</a></li><li><a href="/guide/other/windows/" class="sidebar-link">windows 相关</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc></h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">Linux 命令</h1> <div data-v-1ff7123e><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="linux-命令"><a href="#linux-命令" class="header-anchor">#</a> Linux 命令</h1> <h2 id="常用"><a href="#常用" class="header-anchor">#</a> 常用</h2> <h3 id="清楚缓存释放内存"><a href="#清楚缓存释放内存" class="header-anchor">#</a> 清楚缓存释放内存</h3> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 清除缓存</span>
+sync <span class="token important">&amp;&amp;</span> echo 3 <span class="token punctuation">&gt;</span> /proc/sys/vm/drop_caches
+
+<span class="token comment"># 查看工具安装目录</span>
+rpm <span class="token punctuation">-</span>ql xx
+<span class="token comment"># 如：rpm -ql nginx</span>
+</code></pre></div><h3 id="防火墙"><a href="#防火墙" class="header-anchor">#</a> 防火墙</h3> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 查看防火墙状态</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>state
+
+<span class="token comment"># 开启 firewalld.service服务</span>
+service firewalld start
+
+<span class="token comment"># 重启 firewalld.service服务</span>
+service firewalld restart
+
+<span class="token comment"># 关闭 firewalld.service服务</span>
+service firewalld stop
+
+<span class="token comment"># 开放80端口</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>permanent <span class="token punctuation">-</span><span class="token punctuation">-</span>add<span class="token punctuation">-</span>port=80/tcp
+
+<span class="token comment"># 开放端口号5901-5905</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>permanent <span class="token punctuation">-</span><span class="token punctuation">-</span>zone=public <span class="token punctuation">-</span><span class="token punctuation">-</span>add<span class="token punctuation">-</span>port=5901<span class="token punctuation">-</span>5905/tcp
+
+<span class="token comment"># 查询端口是否开放</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>query<span class="token punctuation">-</span>port=8080/tcp
+
+<span class="token comment"># 移除端口</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>permanent <span class="token punctuation">-</span><span class="token punctuation">-</span>remove<span class="token punctuation">-</span>port=8080/tcp
+
+<span class="token comment">#重启防火墙(修改配置后要重启防火墙)</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>reload
+
+<span class="token comment"># 查看防火墙规则</span>
+firewall<span class="token punctuation">-</span>cmd <span class="token punctuation">-</span><span class="token punctuation">-</span>list<span class="token punctuation">-</span>all
+</code></pre></div><h3 id="解除端口占用"><a href="#解除端口占用" class="header-anchor">#</a> 解除端口占用</h3> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 查看端口是否被占用（8080 为端口号）</span>
+netstat <span class="token punctuation">-</span>anp <span class="token punctuation">|</span> grep 8080
+
+<span class="token comment"># 查看端口占用进程（8080 为端口号）</span>
+fuser <span class="token punctuation">-</span>v <span class="token punctuation">-</span>n tcp 8080
+
+<span class="token comment"># 结束占用端口的进程 (12345 为进程号)</span>
+kill <span class="token punctuation">-</span>s 9 12345
+</code></pre></div><h3 id="通过链接下载文件"><a href="#通过链接下载文件" class="header-anchor">#</a> 通过链接下载文件</h3> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># wget http://xxx 下载文件</span>
+wget https<span class="token punctuation">:</span>//fastdl.mongodb.org/linux/mongodb<span class="token punctuation">-</span>linux<span class="token punctuation">-</span>x86_64<span class="token punctuation">-</span>rhel70<span class="token punctuation">-</span>4.4.5.tgz
+</code></pre></div><h3 id="测试网速"><a href="#测试网速" class="header-anchor">#</a> 测试网速</h3> <div class="custom-block tip"><p class="title"></p><p>Speedtest.net强大而知名的全球宽带网络速度测试网站，采用Flash载入界面，Alexa世界排名非常高，Speedtest.net在全球有数百个测试节点，国内有测速节点几十个。作为一款在线并且可视化的网速测试工具。使用方法简单，无需下载、安装Speedtest.net还推出了命令行下测速工具speedtest.py 就能够实时测试网速。</p></div><div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 1. 下载 speedtest</span>
+wget https<span class="token punctuation">:</span>//raw.githubusercontent.com/sivel/speedtest<span class="token punctuation">-</span>cli/master/speedtest.py
+
+<span class="token comment"># 2. 赋予可执行权限</span>
+chmod +x speedtest.py
+
+<span class="token comment"># 3. 运行</span>
+./speedtest.py
+
+<span class="token comment"># 查看 speedtest 所有命令</span>
+./speedtest.py <span class="token punctuation">-</span><span class="token punctuation">-</span>help
+</code></pre></div><h2 id="用户相关"><a href="#用户相关" class="header-anchor">#</a> 用户相关</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 添加用户</span>
+useradd xx
+　　
+<span class="token comment"># 修改用户密码 不加用户名直接更改自己的密码</span>
+passwd (用户名)
+
+<span class="token comment"># 查看当前的账户 显示的格式为：</span>
+<span class="token comment"># 登录用户名 登录终端（tty:本地登录 pts:远程终端） 登录时间 ip地址</span>
+who
+</code></pre></div><h2 id="文件相关"><a href="#文件相关" class="header-anchor">#</a> 文件相关</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 返回上一级目录</span>
+cd ..
+
+<span class="token comment"># 返回上次所在的目录</span>
+cd <span class="token punctuation">-</span>
+
+<span class="token comment"># 显示工作路径</span>
+pwd
+
+<span class="token comment"># 查看目录中的文件</span>
+ls
+
+<span class="token comment"># 查看目录中的文件</span>
+ls <span class="token punctuation">-</span>F
+
+<span class="token comment"># 显示文件和目录的详细资料</span>
+ls <span class="token punctuation">-</span>l
+
+<span class="token comment"># 显示隐藏文件</span>
+ls <span class="token punctuation">-</span>a
+
+<span class="token comment"># 显示包含数字的文件名和目录名</span>
+ls *<span class="token punctuation">[</span>0<span class="token punctuation">-</span><span class="token number">9</span><span class="token punctuation">]</span>*
+
+<span class="token comment"># 创建文件并编辑</span>
+vi/vim xx
+
+<span class="token comment"># 查看文件内容</span>
+cat xx
+
+<span class="token comment"># 删除文件</span>
+rm xx
+
+<span class="token comment"># 创建文件夹</span>
+mkdir xx
+
+<span class="token comment"># 删除目录'</span>
+rmdir xx
+
+<span class="token comment"># 强制删除文件/文件夹并且不提示确认</span>
+rm <span class="token punctuation">-</span>rf xx
+
+<span class="token comment"># 创建一个目录树</span>
+mkdir <span class="token punctuation">-</span>p /tmp/dir1/dir2
+
+<span class="token comment"># 重命名/移动 一个目录</span>
+mv dir1 new_dir
+
+<span class="token comment"># 复制一个文件</span>
+cp file1 file2
+
+<span class="token comment"># 复制一个目录下的所有文件到当前工作目录</span>
+cp dir/* .
+
+<span class="token comment"># 复制一个目录到当前工作目录</span>
+cp <span class="token punctuation">-</span>a /tmp/dir1 .
+
+<span class="token comment"># 复制一个目录</span>
+cp <span class="token punctuation">-</span>a dir1 dir2
+
+<span class="token comment"># 复制一个目录及子目录</span>
+cp <span class="token punctuation">-</span>r dir1 dir2
+
+<span class="token comment"># 创建一个指向文件或目录的软链接</span>
+ln <span class="token punctuation">-</span>s file1 lnk1
+
+<span class="token comment"># 创建一个指向文件或目录的物理链接</span>
+ln file1 lnk1
+
+<span class="token comment"># 创建一个gzip格式的压缩包</span>
+tar <span class="token punctuation">-</span>cvfz archive.tar.gz xxx
+
+<span class="token comment"># 解压一个gzip格式的压缩包</span>
+tar <span class="token punctuation">-</span>zxvf archive.tar.gz
+</code></pre></div><h2 id="上传下载"><a href="#上传下载" class="header-anchor">#</a> 上传下载</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 检查是否安装sz  rz</span>
+rpm <span class="token punctuation">-</span>qa <span class="token punctuation">|</span> grep rz   <span class="token comment"># 上传</span>
+rpm <span class="token punctuation">-</span>qa <span class="token punctuation">|</span> grep sz   <span class="token comment"># 下载</span>
+
+<span class="token comment"># 安装lrzsz软件</span>
+yum install <span class="token punctuation">-</span>y lrzsz             <span class="token comment"># CentOS</span>
+apt<span class="token punctuation">-</span>get install <span class="token punctuation">-</span>y lrzsz         <span class="token comment"># Ubuntu</span>
+
+<span class="token comment"># 文件上传</span>
+rz
+rz <span class="token punctuation">-</span>be
+<span class="token comment"># 使用rz会有两个问题: 上传中断、上传文件变化(md5不同)。解决办法如下：</span>
+<span class="token comment"># -b: 用binary的方式上传下载, 不解释字符为ASCII。</span>
+<span class="token comment"># -e: 强制escape所有控制字符, 比如Ctrl+x, DEL等。</span>
+
+<span class="token comment"># 文件下载</span>
+<span class="token comment"># 1. 下载一个文件</span>
+sz filename
+sz xx.txt
+
+<span class="token comment"># 2.下载多个文件</span>
+sz filename1 filename2
+
+<span class="token comment"># 3.下载dir目录下的所有文件，不包含dir下的文件夹</span>
+sz dir/*
+</code></pre></div><h2 id="文件搜索"><a href="#文件搜索" class="header-anchor">#</a> 文件搜索</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 开始进入根文件系统搜索文件和目录</span>
+find / <span class="token punctuation">-</span>name file1
+
+<span class="token comment"># 搜索属于用户 'user1' 的文件和目录</span>
+find / <span class="token punctuation">-</span>user user1
+
+<span class="token comment"># 在目录 '/ home/user1' 中搜索带有'.bin' 结尾的文件</span>
+find /home/user1 <span class="token punctuation">-</span>name \<span class="token important">*.bin</span>
+
+<span class="token comment"># 搜索在过去100天内未被使用过的执行文件</span>
+find /usr/bin <span class="token punctuation">-</span>type f <span class="token punctuation">-</span>atime +100
+
+<span class="token comment"># 搜索在10天内被创建或者修改过的文件</span>
+find /usr/bin <span class="token punctuation">-</span>type f <span class="token punctuation">-</span>mtime <span class="token punctuation">-</span><span class="token number">10</span>
+
+<span class="token comment"># 搜索以 '.rpm' 结尾的文件并定义其权限</span>
+find / <span class="token punctuation">-</span>name \<span class="token important">*.rpm</span> <span class="token punctuation">-</span>exec chmod 755 '<span class="token punctuation">{</span><span class="token punctuation">}</span>' \
+
+<span class="token comment"># 搜索以 '.rpm' 结尾的文件，忽略光驱、捷盘等可移动设备</span>
+find / <span class="token punctuation">-</span>xdev <span class="token punctuation">-</span>name \<span class="token important">*.rpm</span>
+
+<span class="token comment"># 寻找以 '.ps' 结尾的文件 - 先运行 'updatedb' 命令</span>
+locate \<span class="token important">*.ps</span>
+
+<span class="token comment"># 显示一个二进制文件、源码或man的位置</span>
+whereis halt
+
+<span class="token comment"># 显示一个二进制文件或可执行文件的完整路径</span>
+which halt
+</code></pre></div><h2 id="文件的权限"><a href="#文件的权限" class="header-anchor">#</a> 文件的权限</h2> <blockquote><p>使用 &quot;+&quot; 设置权限，使用 &quot;-&quot; 用于取消</p></blockquote> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 显示权限</span>
+ls <span class="token punctuation">-</span>lh
+
+<span class="token comment"># 将终端划分成5栏显示</span>
+ls /tmp <span class="token punctuation">|</span> pr <span class="token punctuation">-</span>T5 <span class="token punctuation">-</span>W$COLUMNS
+
+<span class="token comment"># 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限</span>
+chmod ugo+rwx directory1
+
+<span class="token comment"># 删除群组(g)与其他人(o)对目录的读写执行权限</span>
+chmod go<span class="token punctuation">-</span>rwx directory1
+
+<span class="token comment"># 改变一个文件的所有人属性</span>
+chown user1 file1
+
+<span class="token comment"># 改变一个目录的所有人属性并同时改变改目录下所有文件的属性</span>
+chown <span class="token punctuation">-</span>R user1 directory1
+
+<span class="token comment"># 改变文件的群组</span>
+chgrp group1 file1
+
+<span class="token comment"># 改变一个文件的所有人和群组属性</span>
+chown user1<span class="token punctuation">:</span>group1 file1
+
+<span class="token comment"># 把目录和下面所有文件的权限</span>
+chmod <span class="token punctuation">-</span>R 777 testdir
+</code></pre></div><h2 id="系统相关"><a href="#系统相关" class="header-anchor">#</a> 系统相关</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 查看系统版本</span>
+cat /etc/redhat<span class="token punctuation">-</span>release
+
+<span class="token comment"># 查看磁盘信息</span>
+df <span class="token punctuation">-</span>lh
+
+<span class="token comment"># 显示机器的处理器架构</span>
+arch
+uname <span class="token punctuation">-</span>m
+
+<span class="token comment"># 显示正在使用的内核版本</span>
+uname <span class="token punctuation">-</span>r
+
+<span class="token comment"># 显示硬件系统部件 - (SMBIOS / DMI)</span>
+dmidecode <span class="token punctuation">-</span>q
+
+<span class="token comment"># 罗列一个磁盘的架构特性</span>
+hdparm <span class="token punctuation">-</span>i /dev/hda
+
+<span class="token comment"># 在磁盘上执行测试性读取操作</span>
+hdparm <span class="token punctuation">-</span>tT /dev/sda
+
+<span class="token comment"># 显示CPU info的信息</span>
+cat /proc/cpuinfo
+
+<span class="token comment"># 显示系统日期</span>
+date
+
+<span class="token comment"># 显示2007年的日历表</span>
+cal 2007
+
+<span class="token comment"># 设置日期和时间 - 月日时分年.秒</span>
+date 041217002007.00
+
+<span class="token comment"># 将时间修改保存到 BIOS</span>
+clock <span class="token punctuation">-</span>w
+
+<span class="token comment"># 重启 now (为时间是定时 20:00) (为数字是多少分钟后)</span>
+reboot
+shutdown <span class="token punctuation">-</span>r now
+</code></pre></div><h2 id="进程相关"><a href="#进程相关" class="header-anchor">#</a> 进程相关</h2> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment"># 查看所有</span>
+ps <span class="token punctuation">-</span>ef
+
+<span class="token comment"># 查询某个进程</span>
+ps <span class="token punctuation">-</span>ef <span class="token punctuation">|</span>grep xx
+
+<span class="token comment"># linux 下 取进程占用 cpu 最高的前10个进程</span>
+ps aux<span class="token punctuation">|</span>head <span class="token punctuation">-</span>1;ps aux<span class="token punctuation">|</span>grep <span class="token punctuation">-</span>v PID<span class="token punctuation">|</span>sort <span class="token punctuation">-</span>rn <span class="token punctuation">-</span>k +3<span class="token punctuation">|</span>head
+
+<span class="token comment">#linux 下 取进程占用内存(MEM)最高的前10个进程</span>
+ps aux<span class="token punctuation">|</span>head <span class="token punctuation">-</span>1;ps aux<span class="token punctuation">|</span>grep <span class="token punctuation">-</span>v PID<span class="token punctuation">|</span>sort <span class="token punctuation">-</span>rn <span class="token punctuation">-</span>k +4<span class="token punctuation">|</span>head
+
+<span class="token comment"># 杀死进程</span>
+kill <span class="token punctuation">-</span>9 PID 杀死某个进程
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/guide/Linux/code-server/code-server.html" class="prev">
+            vscode 远程开发
+          </a></span> <span class="next"><a href="/guide/Linux/linux-install-nodeJs/">
+            Linux 安装 nodeJs
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#常用" class="sidebar-link reco-side-常用" data-v-70334359>常用</a></li><li class="level-3" data-v-70334359><a href="/guide/Linux/linux-command/#清楚缓存释放内存" class="sidebar-link reco-side-清楚缓存释放内存" data-v-70334359>清楚缓存释放内存</a></li><li class="level-3" data-v-70334359><a href="/guide/Linux/linux-command/#防火墙" class="sidebar-link reco-side-防火墙" data-v-70334359>防火墙</a></li><li class="level-3" data-v-70334359><a href="/guide/Linux/linux-command/#解除端口占用" class="sidebar-link reco-side-解除端口占用" data-v-70334359>解除端口占用</a></li><li class="level-3" data-v-70334359><a href="/guide/Linux/linux-command/#通过链接下载文件" class="sidebar-link reco-side-通过链接下载文件" data-v-70334359>通过链接下载文件</a></li><li class="level-3" data-v-70334359><a href="/guide/Linux/linux-command/#测试网速" class="sidebar-link reco-side-测试网速" data-v-70334359>测试网速</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#用户相关" class="sidebar-link reco-side-用户相关" data-v-70334359>用户相关</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#文件相关" class="sidebar-link reco-side-文件相关" data-v-70334359>文件相关</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#上传下载" class="sidebar-link reco-side-上传下载" data-v-70334359>上传下载</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#文件搜索" class="sidebar-link reco-side-文件搜索" data-v-70334359>文件搜索</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#文件的权限" class="sidebar-link reco-side-文件的权限" data-v-70334359>文件的权限</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#系统相关" class="sidebar-link reco-side-系统相关" data-v-70334359>系统相关</a></li><li class="level-2" data-v-70334359><a href="/guide/Linux/linux-command/#进程相关" class="sidebar-link reco-side-进程相关" data-v-70334359>进程相关</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.2d549f1d.js" defer></script><script src="/assets/js/3.f3b3b376.js" defer></script><script src="/assets/js/1.8209a100.js" defer></script><script src="/assets/js/141.5cff732e.js" defer></script>
+  </body>
+</html>
