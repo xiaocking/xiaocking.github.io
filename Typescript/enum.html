@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TypeScript 的 Enum 类型 | xiaoc的博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/avatar.jpg">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea5e502b.css" as="style"><link rel="preload" href="/assets/js/app.5a23a2ab.js" as="script"><link rel="preload" href="/assets/js/7.4f4f69ac.js" as="script"><link rel="preload" href="/assets/js/2.890c3301.js" as="script"><link rel="preload" href="/assets/js/1.0e465a30.js" as="script"><link rel="preload" href="/assets/js/149.f6fef0ba.js" as="script"><link rel="prefetch" href="/assets/js/10.0d627009.js"><link rel="prefetch" href="/assets/js/100.e9977c7d.js"><link rel="prefetch" href="/assets/js/101.8f2f0fca.js"><link rel="prefetch" href="/assets/js/102.73694b73.js"><link rel="prefetch" href="/assets/js/103.e240a3a2.js"><link rel="prefetch" href="/assets/js/104.c7d3e838.js"><link rel="prefetch" href="/assets/js/105.906f8764.js"><link rel="prefetch" href="/assets/js/106.1dced9c8.js"><link rel="prefetch" href="/assets/js/107.9529b20b.js"><link rel="prefetch" href="/assets/js/108.bc7b80fa.js"><link rel="prefetch" href="/assets/js/109.2ad53dd2.js"><link rel="prefetch" href="/assets/js/11.621fa9eb.js"><link rel="prefetch" href="/assets/js/110.d0c3a25a.js"><link rel="prefetch" href="/assets/js/111.fe19cbb7.js"><link rel="prefetch" href="/assets/js/112.3d6528d8.js"><link rel="prefetch" href="/assets/js/113.2338695c.js"><link rel="prefetch" href="/assets/js/114.c6719eaf.js"><link rel="prefetch" href="/assets/js/115.ad3ed02c.js"><link rel="prefetch" href="/assets/js/116.23bd1249.js"><link rel="prefetch" href="/assets/js/117.ac1a7bf6.js"><link rel="prefetch" href="/assets/js/118.e45f4e0b.js"><link rel="prefetch" href="/assets/js/119.cc1c271c.js"><link rel="prefetch" href="/assets/js/120.94ec1ca5.js"><link rel="prefetch" href="/assets/js/121.04cd88ed.js"><link rel="prefetch" href="/assets/js/122.7de60dba.js"><link rel="prefetch" href="/assets/js/123.b12fc34b.js"><link rel="prefetch" href="/assets/js/124.8683646c.js"><link rel="prefetch" href="/assets/js/125.15a79816.js"><link rel="prefetch" href="/assets/js/126.9fd3169c.js"><link rel="prefetch" href="/assets/js/127.cb723daa.js"><link rel="prefetch" href="/assets/js/128.7280fa4b.js"><link rel="prefetch" href="/assets/js/129.8016d080.js"><link rel="prefetch" href="/assets/js/130.a0377145.js"><link rel="prefetch" href="/assets/js/131.eecae309.js"><link rel="prefetch" href="/assets/js/132.1253b401.js"><link rel="prefetch" href="/assets/js/133.d6b809f3.js"><link rel="prefetch" href="/assets/js/134.9b63d8eb.js"><link rel="prefetch" href="/assets/js/135.beed4120.js"><link rel="prefetch" href="/assets/js/136.e413b0a7.js"><link rel="prefetch" href="/assets/js/137.f69202bb.js"><link rel="prefetch" href="/assets/js/138.9eaf0104.js"><link rel="prefetch" href="/assets/js/139.ffd9c215.js"><link rel="prefetch" href="/assets/js/14.3672a338.js"><link rel="prefetch" href="/assets/js/140.09063887.js"><link rel="prefetch" href="/assets/js/141.1f350964.js"><link rel="prefetch" href="/assets/js/142.812c4b3e.js"><link rel="prefetch" href="/assets/js/143.195f237f.js"><link rel="prefetch" href="/assets/js/144.b44e40ed.js"><link rel="prefetch" href="/assets/js/145.573950bc.js"><link rel="prefetch" href="/assets/js/146.875db123.js"><link rel="prefetch" href="/assets/js/147.b5b7eebc.js"><link rel="prefetch" href="/assets/js/148.6e6b15be.js"><link rel="prefetch" href="/assets/js/15.4fac6b09.js"><link rel="prefetch" href="/assets/js/150.b2e4c6fb.js"><link rel="prefetch" href="/assets/js/151.3673586d.js"><link rel="prefetch" href="/assets/js/152.52ffb437.js"><link rel="prefetch" href="/assets/js/153.6c759fc1.js"><link rel="prefetch" href="/assets/js/154.4d0c63ac.js"><link rel="prefetch" href="/assets/js/155.c3d13b01.js"><link rel="prefetch" href="/assets/js/156.d8441c9a.js"><link rel="prefetch" href="/assets/js/157.aaccf8dc.js"><link rel="prefetch" href="/assets/js/158.e7a64fb3.js"><link rel="prefetch" href="/assets/js/159.9730ba06.js"><link rel="prefetch" href="/assets/js/16.23ded011.js"><link rel="prefetch" href="/assets/js/160.53df5bb4.js"><link rel="prefetch" href="/assets/js/161.0762f8a0.js"><link rel="prefetch" href="/assets/js/162.f2cac1ee.js"><link rel="prefetch" href="/assets/js/163.d2e7b707.js"><link rel="prefetch" href="/assets/js/164.babc4142.js"><link rel="prefetch" href="/assets/js/165.82366d5d.js"><link rel="prefetch" href="/assets/js/166.558d8d79.js"><link rel="prefetch" href="/assets/js/167.1c3eb22a.js"><link rel="prefetch" href="/assets/js/168.12c30145.js"><link rel="prefetch" href="/assets/js/169.591c0579.js"><link rel="prefetch" href="/assets/js/17.ac2950f0.js"><link rel="prefetch" href="/assets/js/170.c688a65a.js"><link rel="prefetch" href="/assets/js/171.c0f40aa0.js"><link rel="prefetch" href="/assets/js/172.f415fdc2.js"><link rel="prefetch" href="/assets/js/173.4d496e21.js"><link rel="prefetch" href="/assets/js/174.3d3ac8c2.js"><link rel="prefetch" href="/assets/js/175.f8230c9b.js"><link rel="prefetch" href="/assets/js/176.2e705b2e.js"><link rel="prefetch" href="/assets/js/177.373669bf.js"><link rel="prefetch" href="/assets/js/178.c7283304.js"><link rel="prefetch" href="/assets/js/179.80fb1279.js"><link rel="prefetch" href="/assets/js/18.5e4bb2f2.js"><link rel="prefetch" href="/assets/js/180.34a7e083.js"><link rel="prefetch" href="/assets/js/181.add69679.js"><link rel="prefetch" href="/assets/js/182.91b8b6cf.js"><link rel="prefetch" href="/assets/js/183.fc63caf8.js"><link rel="prefetch" href="/assets/js/184.cf024b35.js"><link rel="prefetch" href="/assets/js/185.dc2c3287.js"><link rel="prefetch" href="/assets/js/186.80fd9cf0.js"><link rel="prefetch" href="/assets/js/187.10b38066.js"><link rel="prefetch" href="/assets/js/188.5a620559.js"><link rel="prefetch" href="/assets/js/189.a927b3bf.js"><link rel="prefetch" href="/assets/js/19.fc36f143.js"><link rel="prefetch" href="/assets/js/190.07f26f5b.js"><link rel="prefetch" href="/assets/js/191.255da2ae.js"><link rel="prefetch" href="/assets/js/192.2fdef6a9.js"><link rel="prefetch" href="/assets/js/193.06407c0c.js"><link rel="prefetch" href="/assets/js/194.a90ebece.js"><link rel="prefetch" href="/assets/js/195.29fd1859.js"><link rel="prefetch" href="/assets/js/196.bf4341d6.js"><link rel="prefetch" href="/assets/js/197.4a9de1f8.js"><link rel="prefetch" href="/assets/js/198.8e492034.js"><link rel="prefetch" href="/assets/js/199.44b011f4.js"><link rel="prefetch" href="/assets/js/20.27ddb070.js"><link rel="prefetch" href="/assets/js/200.5f36ce6a.js"><link rel="prefetch" href="/assets/js/201.d051709e.js"><link rel="prefetch" href="/assets/js/202.530dad58.js"><link rel="prefetch" href="/assets/js/203.17f0fa78.js"><link rel="prefetch" href="/assets/js/204.d1159327.js"><link rel="prefetch" href="/assets/js/205.0a87b476.js"><link rel="prefetch" href="/assets/js/206.392ee339.js"><link rel="prefetch" href="/assets/js/207.ee568386.js"><link rel="prefetch" href="/assets/js/21.14e54ac0.js"><link rel="prefetch" href="/assets/js/22.5362d869.js"><link rel="prefetch" href="/assets/js/23.18fda006.js"><link rel="prefetch" href="/assets/js/24.e0671235.js"><link rel="prefetch" href="/assets/js/25.eb171991.js"><link rel="prefetch" href="/assets/js/26.f0f7ebb1.js"><link rel="prefetch" href="/assets/js/27.e24f3e01.js"><link rel="prefetch" href="/assets/js/28.16002380.js"><link rel="prefetch" href="/assets/js/29.b96343b6.js"><link rel="prefetch" href="/assets/js/3.0d1e2d80.js"><link rel="prefetch" href="/assets/js/30.3eec7bbe.js"><link rel="prefetch" href="/assets/js/31.14405f4b.js"><link rel="prefetch" href="/assets/js/32.63b839d1.js"><link rel="prefetch" href="/assets/js/33.4a3e5403.js"><link rel="prefetch" href="/assets/js/34.518cbe50.js"><link rel="prefetch" href="/assets/js/35.ef5109b4.js"><link rel="prefetch" href="/assets/js/36.c871f4f8.js"><link rel="prefetch" href="/assets/js/37.0ece2671.js"><link rel="prefetch" href="/assets/js/38.d9c89344.js"><link rel="prefetch" href="/assets/js/39.c181ec3d.js"><link rel="prefetch" href="/assets/js/4.f57222e0.js"><link rel="prefetch" href="/assets/js/40.2d3d294b.js"><link rel="prefetch" href="/assets/js/41.e7810f61.js"><link rel="prefetch" href="/assets/js/42.3fa9566c.js"><link rel="prefetch" href="/assets/js/43.ca366d09.js"><link rel="prefetch" href="/assets/js/44.4989768a.js"><link rel="prefetch" href="/assets/js/45.7466801d.js"><link rel="prefetch" href="/assets/js/46.4df57324.js"><link rel="prefetch" href="/assets/js/47.901e6c60.js"><link rel="prefetch" href="/assets/js/48.307f3d2f.js"><link rel="prefetch" href="/assets/js/49.9decd94d.js"><link rel="prefetch" href="/assets/js/5.9dffc834.js"><link rel="prefetch" href="/assets/js/50.2131e069.js"><link rel="prefetch" href="/assets/js/51.e78e4b5a.js"><link rel="prefetch" href="/assets/js/52.70ab91b6.js"><link rel="prefetch" href="/assets/js/53.eaa6f0a4.js"><link rel="prefetch" href="/assets/js/54.c85dda47.js"><link rel="prefetch" href="/assets/js/55.908c9933.js"><link rel="prefetch" href="/assets/js/56.b5e730a4.js"><link rel="prefetch" href="/assets/js/57.93abcce1.js"><link rel="prefetch" href="/assets/js/58.1d8ac2c3.js"><link rel="prefetch" href="/assets/js/59.9e2d16c9.js"><link rel="prefetch" href="/assets/js/6.a1c74fcd.js"><link rel="prefetch" href="/assets/js/60.23316df9.js"><link rel="prefetch" href="/assets/js/61.dd7fef6c.js"><link rel="prefetch" href="/assets/js/62.1f99b384.js"><link rel="prefetch" href="/assets/js/63.12f80bcc.js"><link rel="prefetch" href="/assets/js/64.ec2c56df.js"><link rel="prefetch" href="/assets/js/65.d74318cf.js"><link rel="prefetch" href="/assets/js/66.e3a64901.js"><link rel="prefetch" href="/assets/js/67.ab53b0b9.js"><link rel="prefetch" href="/assets/js/68.ae7cab1b.js"><link rel="prefetch" href="/assets/js/69.07ad46e2.js"><link rel="prefetch" href="/assets/js/70.5de26513.js"><link rel="prefetch" href="/assets/js/71.fce3ecaa.js"><link rel="prefetch" href="/assets/js/72.303b6432.js"><link rel="prefetch" href="/assets/js/73.c286832f.js"><link rel="prefetch" href="/assets/js/74.4523e36c.js"><link rel="prefetch" href="/assets/js/75.e5633273.js"><link rel="prefetch" href="/assets/js/76.5e3a2028.js"><link rel="prefetch" href="/assets/js/77.ba3114d5.js"><link rel="prefetch" href="/assets/js/78.ccb476b1.js"><link rel="prefetch" href="/assets/js/79.4006e58e.js"><link rel="prefetch" href="/assets/js/8.58388833.js"><link rel="prefetch" href="/assets/js/80.7a996f28.js"><link rel="prefetch" href="/assets/js/81.d8ab3e60.js"><link rel="prefetch" href="/assets/js/82.8cfb4a9c.js"><link rel="prefetch" href="/assets/js/83.24c596f9.js"><link rel="prefetch" href="/assets/js/84.fe1b5e78.js"><link rel="prefetch" href="/assets/js/85.39094bd3.js"><link rel="prefetch" href="/assets/js/86.d7569df3.js"><link rel="prefetch" href="/assets/js/87.b634e8f4.js"><link rel="prefetch" href="/assets/js/88.fa76e7f8.js"><link rel="prefetch" href="/assets/js/89.12514e4e.js"><link rel="prefetch" href="/assets/js/9.da8464c7.js"><link rel="prefetch" href="/assets/js/90.52202cf6.js"><link rel="prefetch" href="/assets/js/91.ea0e88ba.js"><link rel="prefetch" href="/assets/js/92.eadea5b4.js"><link rel="prefetch" href="/assets/js/93.6f5af6a0.js"><link rel="prefetch" href="/assets/js/94.61e0b8bb.js"><link rel="prefetch" href="/assets/js/95.1df738f5.js"><link rel="prefetch" href="/assets/js/96.91aaaa5d.js"><link rel="prefetch" href="/assets/js/97.6619c14f.js"><link rel="prefetch" href="/assets/js/98.3dcdfb56.js"><link rel="prefetch" href="/assets/js/99.2c1c8399.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.20c11dcf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea5e502b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>xiaoc的博客</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2025
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.jpg" alt="xiaoc的博客" class="logo"> <span class="site-name">xiaoc的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Javascript
+</a></div><div class="nav-item"><a href="/ECMAScript6/" class="nav-link"><i class="iconfont reco-api"></i>
+  ECMAScript6
+</a></div><div class="nav-item"><a href="/Typescript/" class="nav-link router-link-active"><i class="iconfont reco-api"></i>
+  Typescript
+</a></div><div class="nav-item"><a href="/css/" class="nav-link"><i class="iconfont reco-api"></i>
+  Css
+</a></div><div class="nav-item"><a href="https://github.com/xiaocking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>169</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link"><i class="iconfont reco-api"></i>
+  Javascript
+</a></div><div class="nav-item"><a href="/ECMAScript6/" class="nav-link"><i class="iconfont reco-api"></i>
+  ECMAScript6
+</a></div><div class="nav-item"><a href="/Typescript/" class="nav-link router-link-active"><i class="iconfont reco-api"></i>
+  Typescript
+</a></div><div class="nav-item"><a href="/css/" class="nav-link"><i class="iconfont reco-api"></i>
+  Css
+</a></div><div class="nav-item"><a href="https://github.com/xiaocking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Typescript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Typescript/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Typescript/basic.html" class="sidebar-link">基本用法</a></li><li><a href="/Typescript/any.html" class="sidebar-link">any 类型</a></li><li><a href="/Typescript/types.html" class="sidebar-link">类型系统</a></li><li><a href="/Typescript/array.html" class="sidebar-link">数组</a></li><li><a href="/Typescript/tuple.html" class="sidebar-link">元组</a></li><li><a href="/Typescript/symbol.html" class="sidebar-link">symbol 类型</a></li><li><a href="/Typescript/function.html" class="sidebar-link">函数</a></li><li><a href="/Typescript/object.html" class="sidebar-link">对象</a></li><li><a href="/Typescript/interface.html" class="sidebar-link">interface</a></li><li><a href="/Typescript/class.html" class="sidebar-link">类</a></li><li><a href="/Typescript/generics.html" class="sidebar-link">泛型</a></li><li><a href="/Typescript/enum.html" aria-current="page" class="active sidebar-link">Enum 类型</a></li><li><a href="/Typescript/assert.html" class="sidebar-link">类型断言</a></li><li><a href="/Typescript/module.html" class="sidebar-link">模块</a></li><li><a href="/Typescript/namespace.html" class="sidebar-link">namespace</a></li><li><a href="/Typescript/decorator.html" class="sidebar-link">装饰器</a></li><li><a href="/Typescript/decorator-legacy.html" class="sidebar-link">装饰器（旧语法）</a></li><li><a href="/Typescript/declare.html" class="sidebar-link">declare 关键字</a></li><li><a href="/Typescript/dts.html" class="sidebar-link">类型声明文件</a></li><li><a href="/Typescript/operator.html" class="sidebar-link">运算符</a></li><li><a href="/Typescript/mapping.html" class="sidebar-link">类型映射</a></li><li><a href="/Typescript/utility.html" class="sidebar-link">类型工具</a></li><li><a href="/Typescript/comment.html" class="sidebar-link">注释指令</a></li><li><a href="/Typescript/tsconfig.html" class="sidebar-link">配置文件</a></li><li><a href="/Typescript/tsc.html" class="sidebar-link">tsc 命令</a></li><li><a href="/Typescript/type-operations.html" class="sidebar-link">类型运算</a></li><li><a href="/Typescript/es6.html" class="sidebar-link">ES6 类型</a></li><li><a href="/Typescript/narrowing.html" class="sidebar-link">类型缩小</a></li><li><a href="/Typescript/npm.html" class="sidebar-link">npm 模块</a></li><li><a href="/Typescript/react.html" class="sidebar-link">React 支持</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2025
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">TypeScript 的 Enum 类型</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="typescript-的-enum-类型"><a href="#typescript-的-enum-类型" class="header-anchor">#</a> TypeScript 的 Enum 类型</h1> <p>Enum 是 TypeScript 新增的一种数据结构和类型，中文译为“枚举”。</p> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>实际开发中，经常需要定义一组相关的常量。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> <span class="token constant">RED</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">GREEN</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">BLUE</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> color <span class="token operator">=</span> <span class="token function">userInput</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>color <span class="token operator">===</span> <span class="token constant">RED</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* */</span><span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>color <span class="token operator">===</span> <span class="token constant">GREEN</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* */</span><span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>color <span class="token operator">===</span> <span class="token constant">BLUE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* */</span><span class="token punctuation">}</span>
+
+<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'wrong color'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面示例中，常量<code>RED</code>、<code>GREEN</code>、<code>BLUE</code>是相关的，意为变量<code>color</code>的三个可能的取值。它们具体等于什么值其实并不重要，只要不相等就可以了。</p> <p>TypeScript 就设计了 Enum 结构，用来将相关常量放在一个容器里面，方便使用。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>     <span class="token comment">// 0</span>
+  Green<span class="token punctuation">,</span>   <span class="token comment">// 1</span>
+  Blue     <span class="token comment">// 2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例声明了一个 Enum 结构<code>Color</code>，里面包含三个成员<code>Red</code>、<code>Green</code>和<code>Blue</code>。第一个成员的值默认为整数<code>0</code>，第二个为<code>1</code>，第三个为<code>2</code>，以此类推。</p> <p>使用时，调用 Enum 的某个成员，与调用对象属性的写法一样，可以使用点运算符，也可以使用方括号运算符。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">let</span> c <span class="token operator">=</span> Color<span class="token punctuation">.</span>Green<span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token comment">// 等同于</span>
+<span class="token keyword">let</span> c <span class="token operator">=</span> Color<span class="token punctuation">[</span><span class="token string">'Green'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+</code></pre></div><p>Enum 结构本身也是一种类型。比如，上例的变量<code>c</code>等于<code>1</code>，它的类型可以是 Color，也可以是<code>number</code>。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">let</span> c<span class="token operator">:</span>Color <span class="token operator">=</span> Color<span class="token punctuation">.</span>Green<span class="token punctuation">;</span> <span class="token comment">// 正确</span>
+<span class="token keyword">let</span> c<span class="token operator">:</span><span class="token builtin">number</span> <span class="token operator">=</span> Color<span class="token punctuation">.</span>Green<span class="token punctuation">;</span> <span class="token comment">// 正确</span>
+</code></pre></div><p>上面示例中，变量<code>c</code>的类型写成<code>Color</code>或<code>number</code>都可以。但是，<code>Color</code>类型的语义更好。</p> <p>Enum 结构的特别之处在于，它既是一种类型，也是一个值。绝大多数 TypeScript 语法都是类型语法，编译后会全部去除，但是 Enum 结构是一个值，编译后会变成 JavaScript 对象，留在代码中。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// 编译前</span>
+<span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>     <span class="token comment">// 0</span>
+  Green<span class="token punctuation">,</span>   <span class="token comment">// 1</span>
+  Blue     <span class="token comment">// 2</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 编译后</span>
+<span class="token keyword">let</span> Color <span class="token operator">=</span> <span class="token punctuation">{</span>
+  Red<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  Green<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  Blue<span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面示例是 Enum 结构编译前后的对比。</p> <p>由于 TypeScript 的定位是 JavaScript 语言的类型增强，所以官方建议谨慎使用 Enum 结构，因为它不仅仅是类型，还会为编译后的代码加入一个对象。</p> <p>Enum 结构比较适合的场景是，成员的值不重要，名字更重要，从而增加代码的可读性和可维护性。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Operator <span class="token punctuation">{</span>
+  <span class="token constant">ADD</span><span class="token punctuation">,</span>
+  <span class="token constant">DIV</span><span class="token punctuation">,</span>
+  <span class="token constant">MUL</span><span class="token punctuation">,</span>
+  <span class="token constant">SUB</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">compute</span><span class="token punctuation">(</span>
+  op<span class="token operator">:</span>Operator<span class="token punctuation">,</span>
+  a<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>
+  b<span class="token operator">:</span><span class="token builtin">number</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>op<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> Operator<span class="token punctuation">.</span><span class="token constant">ADD</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">case</span> Operator<span class="token punctuation">.</span><span class="token constant">DIV</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> a <span class="token operator">/</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">case</span> Operator<span class="token punctuation">.</span><span class="token constant">MUL</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">case</span> Operator<span class="token punctuation">.</span><span class="token constant">SUB</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'wrong operator'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">compute</span><span class="token punctuation">(</span>Operator<span class="token punctuation">.</span><span class="token constant">ADD</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">// 4</span>
+</code></pre></div><p>上面示例中，Enum 结构<code>Operator</code>的四个成员表示四则运算“加减乘除”。代码根本不需要用到这四个成员的值，只用成员名就够了。</p> <p><a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html#enum-overhaul" target="_blank" rel="noopener noreferrer">TypeScript 5.0<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 之前，Enum 有一个 Bug，就是 Enum 类型的变量可以赋值为任何数值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Bool <span class="token punctuation">{</span>
+  No<span class="token punctuation">,</span>
+  Yes
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>noYes<span class="token operator">:</span>Bool<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// TypeScript 5.0 之前不报错</span>
+</code></pre></div><p>上面示例中，函数<code>foo</code>的参数<code>noYes</code>是 Enum 类型，只有两个可用的值。但是，TypeScript 5.0 之前，任何数值作为函数<code>foo</code>的参数，编译都不会报错，TypeScript 5.0 纠正了这个问题。</p> <p>另外，由于 Enum 结构编译后是一个对象，所以不能有与它同名的变量（包括对象、函数、类等）。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>
+  Blue
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> Color <span class="token operator">=</span> <span class="token string">'red'</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+</code></pre></div><p>上面示例，Enum 结构与变量同名，导致报错。</p> <p>很大程度上，Enum 结构可以被对象的<code>as const</code>断言替代。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span><span class="token punctuation">,</span>
+  <span class="token constant">C</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> Bar <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token constant">C</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">===</span> Foo<span class="token punctuation">.</span><span class="token constant">A</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 等同于</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">===</span> Bar<span class="token punctuation">.</span><span class="token constant">A</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，对象<code>Bar</code>使用了<code>as const</code>断言，作用就是使得它的属性无法修改。这样的话，<code>Foo</code>和<code>Bar</code>的行为就很类似了，前者完全可以用后者替代，而且后者还是 JavaScript 的原生数据结构。</p> <h2 id="enum-成员的值"><a href="#enum-成员的值" class="header-anchor">#</a> Enum 成员的值</h2> <p>Enum 成员默认不必赋值，系统会从零开始逐一递增，按照顺序为每个成员赋值，比如0、1、2……</p> <p>但是，也可以为 Enum 成员显式赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>
+  Blue
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 等同于</span>
+<span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  Green <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  Blue <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，Enum 每个成员的值都是显式赋值。</p> <p>成员的值可以是任意数值，但不能是大整数（Bigint）。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">,</span>
+  Green <span class="token operator">=</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+  Blue <span class="token operator">=</span> <span class="token number">7n</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，Enum 成员的值可以是小数，但不能是 Bigint。</p> <p>成员的值甚至可以相同。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  Green <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  Blue <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果只设定第一个成员的值，后面成员的值就会从这个值开始递增。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>  <span class="token comment">// 8</span>
+  Blue   <span class="token comment">// 9</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 或者</span>
+<span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span> <span class="token comment">// 0</span>
+  Green <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span>
+  Blue <span class="token comment">// 8</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Enum 成员的值也可以使用计算式。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Permission <span class="token punctuation">{</span>
+  UserRead     <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">8</span><span class="token punctuation">,</span>
+  UserWrite    <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">7</span><span class="token punctuation">,</span>
+  UserExecute  <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">6</span><span class="token punctuation">,</span>
+  GroupRead    <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  GroupWrite   <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  GroupExecute <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  AllRead      <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  AllWrite     <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  AllExecute   <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> Bool <span class="token punctuation">{</span>
+  No <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">,</span>
+  Yes <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，Enum 成员的值等于一个计算式，或者等于函数的返回值，都是正确的。</p> <p>Enum 成员值都是只读的，不能重新赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>
+  Blue
+<span class="token punctuation">}</span>
+
+Color<span class="token punctuation">.</span>Red <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+</code></pre></div><p>上面示例中，重新为 Enum 成员赋值就会报错。</p> <p>为了让这一点更醒目，通常会在 enum 关键字前面加上<code>const</code>修饰，表示这是常量，不能再次赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> <span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>
+  Blue
+<span class="token punctuation">}</span>
+</code></pre></div><p>加上<code>const</code>还有一个好处，就是编译为 JavaScript 代码后，代码中 Enum 成员会被替换成对应的值，这样能提高性能表现。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> <span class="token keyword">enum</span> Color <span class="token punctuation">{</span>
+  Red<span class="token punctuation">,</span>
+  Green<span class="token punctuation">,</span>
+  Blue
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> x <span class="token operator">=</span> Color<span class="token punctuation">.</span>Red<span class="token punctuation">;</span>
+<span class="token keyword">const</span> y <span class="token operator">=</span> Color<span class="token punctuation">.</span>Green<span class="token punctuation">;</span>
+<span class="token keyword">const</span> z <span class="token operator">=</span> Color<span class="token punctuation">.</span>Blue<span class="token punctuation">;</span>
+
+<span class="token comment">// 编译后</span>
+<span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">/* Color.Red */</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">/* Color.Green */</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> z <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">/* Color.Blue */</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面示例中，由于 Enum 结构前面加了<code>const</code>关键字，所以编译产物里面就没有生成对应的对象，而是把所有 Enum 成员出现的场合，都替换成对应的常量。</p> <p>如果希望加上<code>const</code>关键词后，运行时还能访问 Enum 结构（即编译后依然将 Enum 转成对象），需要在编译时打开<code>preserveConstEnums</code>编译选项。</p> <h2 id="同名-enum-的合并"><a href="#同名-enum-的合并" class="header-anchor">#</a> 同名 Enum 的合并</h2> <p>多个同名的 Enum 结构会自动合并。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">C</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 等同于</span>
+<span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span>，
+  <span class="token constant">C</span> <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，<code>Foo</code>分成三段定义，系统会自动把它们合并。</p> <p>Enum 结构合并时，只允许其中一个的首成员省略初始值，否则报错。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">B</span><span class="token punctuation">,</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，<code>Foo</code>的两段定义的第一个成员，都没有设置初始值，导致报错。</p> <p>同名 Enum 合并时，不能有同名成员，否则报错。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 报错</span>
+  <span class="token constant">C</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，<code>Foo</code>的两段定义有一个同名成员<code>B</code>，导致报错。</p> <p>同名 Enum 合并的另一个限制是，所有定义必须同为 const 枚举或者非 const 枚举，不允许混合使用。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// 正确</span>
+<span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 正确</span>
+<span class="token keyword">const</span> <span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 报错</span>
+<span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token keyword">enum</span> <span class="token constant">E</span> <span class="token punctuation">{</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>同名 Enum 的合并，最大用处就是补充外部定义的 Enum 结构。</p> <h2 id="字符串-enum"><a href="#字符串-enum" class="header-anchor">#</a> 字符串 Enum</h2> <p>Enum 成员的值除了设为数值，还可以设为字符串。也就是说，Enum 也可以用作一组相关字符串的集合。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Direction <span class="token punctuation">{</span>
+  Up <span class="token operator">=</span> <span class="token string">'UP'</span><span class="token punctuation">,</span>
+  Down <span class="token operator">=</span> <span class="token string">'DOWN'</span><span class="token punctuation">,</span>
+  Left <span class="token operator">=</span> <span class="token string">'LEFT'</span><span class="token punctuation">,</span>
+  Right <span class="token operator">=</span> <span class="token string">'RIGHT'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，<code>Direction</code>就是字符串枚举，每个成员的值都是字符串。</p> <p>注意，字符串枚举的所有成员值，都必须显式设置。如果没有设置，成员值默认为数值，且位置必须在字符串成员之前。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Foo <span class="token punctuation">{</span>
+  <span class="token constant">A</span><span class="token punctuation">,</span> <span class="token comment">// 0</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">,</span>
+  <span class="token constant">C</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，<code>A</code>之前没有其他成员，所以可以不设置初始值，默认等于<code>0</code>；<code>C</code>之前有一个字符串成员，所以<code>C</code>必须有初始值，不赋值就报错了。</p> <p>Enum 成员可以是字符串和数值混合赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Enum <span class="token punctuation">{</span>
+  One <span class="token operator">=</span> <span class="token string">'One'</span><span class="token punctuation">,</span>
+  Two <span class="token operator">=</span> <span class="token string">'Two'</span><span class="token punctuation">,</span>
+  Three <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  Four <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>除了数值和字符串，Enum 成员不允许使用其他值（比如 Symbol 值）。</p> <p>变量类型如果是字符串 Enum，就不能再赋值为字符串，这跟数值 Enum 不一样。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  One <span class="token operator">=</span> <span class="token string">'One'</span><span class="token punctuation">,</span>
+  Two <span class="token operator">=</span> <span class="token string">'Two'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> s <span class="token operator">=</span> MyEnum<span class="token punctuation">.</span>One<span class="token punctuation">;</span>
+s <span class="token operator">=</span> <span class="token string">'One'</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+</code></pre></div><p>上面示例中，变量<code>s</code>的类型是<code>MyEnum</code>，再赋值为字符串就报错。</p> <p>由于这个原因，如果函数的参数类型是字符串 Enum，传参时就不能直接传入字符串，而要传入 Enum 成员。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  One <span class="token operator">=</span> <span class="token string">'One'</span><span class="token punctuation">,</span>
+  Two <span class="token operator">=</span> <span class="token string">'Two'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>arg<span class="token operator">:</span>MyEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'arg is '</span> <span class="token operator">+</span> arg<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token string">'One'</span><span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+</code></pre></div><p>上面示例中，参数类型是<code>MyEnum</code>，直接传入字符串会报错。</p> <p>所以，字符串 Enum 作为一种类型，有限定函数参数的作用。</p> <p>前面说过，数值 Enum 的成员值往往不重要。但是有些场合，开发者可能希望 Enum 成员值可以保存一些有用的信息，所以 TypeScript 才设计了字符串 Enum。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> <span class="token keyword">enum</span> MediaTypes <span class="token punctuation">{</span>
+  <span class="token constant">JSON</span> <span class="token operator">=</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+  <span class="token constant">XML</span> <span class="token operator">=</span> <span class="token string">'application/xml'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'localhost'</span><span class="token punctuation">;</span>
+
+<span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Accept<span class="token operator">:</span> MediaTypes<span class="token punctuation">.</span><span class="token constant">JSON</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面示例中，函数<code>fetch()</code>的参数对象的属性<code>Accept</code>，只能接受一些指定的字符串。这时就很适合把字符串放进一个 Enum 结构，通过成员值来引用这些字符串。</p> <p>字符串 Enum 可以使用联合类型（union）代替。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">function</span> <span class="token function">move</span><span class="token punctuation">(</span>
+  where<span class="token operator">:</span><span class="token string">'Up'</span><span class="token operator">|</span><span class="token string">'Down'</span><span class="token operator">|</span><span class="token string">'Left'</span><span class="token operator">|</span><span class="token string">'Right'</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，函数参数<code>where</code>属于联合类型，效果跟指定为字符串 Enum 是一样的。</p> <p>注意，字符串 Enum 的成员值，不能使用表达式赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  <span class="token constant">A</span> <span class="token operator">=</span> <span class="token string">'one'</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'T'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面示例中，成员<code>B</code>的值是一个字符串表达式，导致报错。</p> <h2 id="keyof-运算符"><a href="#keyof-运算符" class="header-anchor">#</a> keyof 运算符</h2> <p>keyof 运算符可以取出 Enum 结构的所有成员名，作为联合类型返回。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  <span class="token constant">A</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token string">'b'</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 'A'|'B'</span>
+<span class="token keyword">type</span> <span class="token class-name">Foo</span> <span class="token operator">=</span> <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> MyEnum<span class="token punctuation">;</span>
+</code></pre></div><p>上面示例中，<code>keyof typeof MyEnum</code>可以取出<code>MyEnum</code>的所有成员名，所以类型<code>Foo</code>等同于联合类型<code>'A'|'B'</code>。</p> <p>注意，这里的<code>typeof</code>是必需的，否则<code>keyof MyEnum</code>相当于<code>keyof number</code>。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">type</span> <span class="token class-name">Foo</span> <span class="token operator">=</span> <span class="token keyword">keyof</span> MyEnum<span class="token punctuation">;</span>
+<span class="token comment">// &quot;toString&quot; | &quot;toFixed&quot; | &quot;toExponential&quot; |</span>
+<span class="token comment">// &quot;toPrecision&quot; | &quot;valueOf&quot; | &quot;toLocaleString&quot;</span>
+</code></pre></div><p>上面示例中，类型<code>Foo</code>等于类型<code>number</code>的所有原生属性名组成的联合类型。</p> <p>这是因为 Enum 作为类型，本质上属于<code>number</code>或<code>string</code>的一种变体，而<code>typeof MyEnum</code>会将<code>MyEnum</code>当作一个值处理，从而先其转为对象类型，就可以再用<code>keyof</code>运算符返回该对象的所有属性名。</p> <p>如果要返回 Enum 所有的成员值，可以使用<code>in</code>运算符。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  <span class="token constant">A</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token string">'b'</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// { a: any, b: any }</span>
+<span class="token keyword">type</span> <span class="token class-name">Foo</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key <span class="token keyword">in</span> MyEnum<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面示例中，采用属性索引可以取出<code>MyEnum</code>的所有成员值。</p> <h2 id="反向映射"><a href="#反向映射" class="header-anchor">#</a> 反向映射</h2> <p>数值 Enum 存在反向映射，即可以通过成员值获得成员名。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Weekdays <span class="token punctuation">{</span>
+  Monday <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  Tuesday<span class="token punctuation">,</span>
+  Wednesday<span class="token punctuation">,</span>
+  Thursday<span class="token punctuation">,</span>
+  Friday<span class="token punctuation">,</span>
+  Saturday<span class="token punctuation">,</span>
+  Sunday
+<span class="token punctuation">}</span>
+
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Weekdays<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// Wednesday</span>
+</code></pre></div><p>上面示例中，Enum 成员<code>Wednesday</code>的值等于3，从而可以从成员值<code>3</code>取到对应的成员名<code>Wednesday</code>，这就叫反向映射。</p> <p>这是因为 TypeScript 会将上面的 Enum 结构，编译成下面的 JavaScript 代码。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> Weekdays<span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">Weekdays</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Monday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Monday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Tuesday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Tuesday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Wednesday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Wednesday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Thursday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Thursday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Friday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Friday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Saturday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Saturday&quot;</span><span class="token punctuation">;</span>
+    Weekdays<span class="token punctuation">[</span>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Sunday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Sunday&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Weekdays <span class="token operator">||</span> <span class="token punctuation">(</span>Weekdays <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面代码中，实际进行了两组赋值，以第一个成员为例。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Weekdays<span class="token punctuation">[</span>
+  Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Monday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Monday&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面代码有两个赋值运算符（<code>=</code>），实际上等同于下面的代码。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Weekdays<span class="token punctuation">[</span><span class="token string">&quot;Monday&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+Weekdays<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;Monday&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>注意，这种情况只发生在数值 Enum，对于字符串 Enum，不存在反向映射。这是因为字符串 Enum 编译后只有一组赋值。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> MyEnum <span class="token punctuation">{</span>
+  <span class="token constant">A</span> <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+  <span class="token constant">B</span> <span class="token operator">=</span> <span class="token string">'b'</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 编译后</span>
+<span class="token keyword">var</span> MyEnum<span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>MyEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    MyEnum<span class="token punctuation">[</span><span class="token string">&quot;A&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">;</span>
+    MyEnum<span class="token punctuation">[</span><span class="token string">&quot;B&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>MyEnum <span class="token operator">||</span> <span class="token punctuation">(</span>MyEnum <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/Typescript/generics.html" class="prev">
+          泛型
+        </a></span> <span class="next"><a href="/Typescript/assert.html">
+          类型断言
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#简介" class="sidebar-link reco-side-简介" data-v-b57cc07c>简介</a></li><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#enum-成员的值" class="sidebar-link reco-side-enum-成员的值" data-v-b57cc07c>Enum 成员的值</a></li><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#同名-enum-的合并" class="sidebar-link reco-side-同名-enum-的合并" data-v-b57cc07c>同名 Enum 的合并</a></li><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#字符串-enum" class="sidebar-link reco-side-字符串-enum" data-v-b57cc07c>字符串 Enum</a></li><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#keyof-运算符" class="sidebar-link reco-side-keyof-运算符" data-v-b57cc07c>keyof 运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/Typescript/enum.html#反向映射" class="sidebar-link reco-side-反向映射" data-v-b57cc07c>反向映射</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5a23a2ab.js" defer></script><script src="/assets/js/7.4f4f69ac.js" defer></script><script src="/assets/js/2.890c3301.js" defer></script><script src="/assets/js/1.0e465a30.js" defer></script><script src="/assets/js/149.f6fef0ba.js" defer></script>
+  </body>
+</html>
